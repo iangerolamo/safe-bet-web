@@ -3,16 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {MdbCheckboxModule} from "mdb-angular-ui-kit/checkbox";
+import {ComponentsModule} from "./shared/components/components.module";
+import { RouterModule } from '@angular/router';
+import {HttpClientModule} from "@angular/common/http";
+import {FeaturesModule} from "./features/features.module";
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MdbCheckboxModule
+    RouterModule,
+    ComponentsModule,
+    FeaturesModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
